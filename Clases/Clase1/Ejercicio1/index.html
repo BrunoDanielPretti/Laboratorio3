@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+
+<form action="#" method="GET">
+    Nombre:
+    <input type="text" name="nombre" value="ingresar"> <br>
+    Clave:   
+    <input type="password" name="contrasena" size="5"> <br>
+    Comentarios: <br>
+    <textarea name="comentario" id="" cols="20" rows="5"> 
+
+    </textarea> <br>
+    Localidad:         
+    <select name="Localidad" id="">
+        <option value="1">Avellaneda</option>
+        <option value="2">Wilde</option>
+        <option value="3">Quilmes</option>
+        <option value="4">Sarandi</option>
+        <option value="5">Ñandu</option>
+    </select> <br>
+
+    Localidades: <br>
+    <select name="Localidades[]" id="" multiple size="5">
+        <option value="1">Avellaneda</option>
+        <option value="2">Wilde</option>
+        <option value="3">Quilmes</option>
+        <option value="4">Sarandi</option>
+        <option value="5">Ñandu</option>
+    </select> <br>
+
+    Otra cosa:         
+    <select name="Localidad" id="">
+        <optgroup name="sur" label="Sur">
+            <option value="1">Avellaneda</option>
+            <option value="2">Wilde</option>
+            <option value="3">Quilmes</option>
+            <option value="4">Sarandi</option>
+            <option value="5">Ñandu</option>
+        </optgroup>
+        <optgroup name="norte" label="Norte">
+            <option value="1">Avellaneda</option>
+            <option value="2">Wilde</option>
+            <option value="3">Quilmes</option>
+            <option value="4">Sarandi</option>
+            <option value="5">Ñandu</option>
+        </optgroup>        
+    </select> <br>
+
+    <fieldset>
+       <legend>Otros datos:</legend> 
+       Nombre:
+    <input type="text" name="nombre" value="ingresar"> <br>
+    Clave:   
+    <input type="password" name="contrasena" size="5"> <br>
+       
+    </fieldset>
+
+    <input type="checkbox" name="bici" checked>Sabe Andar en bicicleta <br>
+    <input type="checkbox">Sabe Nadar <br>
+
+    <input type="radio" name="genero" value="masculino" checked>Masculino <br>
+    <input type="radio" name="genero" value="femenino">femenino <br>
+
+
+
+
+    <input type="submit" name="enviar" Value="enviar datos"> <br>
+    <input type="reset" value="limpiar">
+
+</form>
+    
+</body>
+</html>
+

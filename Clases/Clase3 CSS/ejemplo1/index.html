@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <style>
         h1, h4{
-            color: coral; 
+            color: hotpink; 
             font-family:monospace, Arial; 
             font-size: 30px;
             font-style: oblique;
@@ -12,27 +12,84 @@
         }                
         h5{
             font-size: 60px;
-
-            background: #999999;
+            opacity: .5;
+            background: #999999;                        
             text-align: center;
             text-decoration: underline;
             /*letter-spacing: 15px;*/
             word-spacing: 15px;
+            
             /*text-transform: capitalize; Mayusculas las primeras letras */                
         }
 
+        body{
+            /*background-color: blanchedalmond;*/
+            background-image: url("https://s-media-cache-ak0.pinimg.com/736x/14/4b/4c/144b4cb40239e9bfb2bbcac91427c88b.jpg"); /* ../images/Koala.php para ir para atras */            
+            /*background-image: url("http://rs119.pbsrc.com/albums/o126/kez4oz/Album%202/glitter-unicorn.gif~c200"); /* ../images/Koala.php para ir para atras */    
+        }
+
+        .Vistoso{ /* El punto indica q es una class*/
+            background-color: cyan;
+            opacity: .5;
+            border-width: 1px;
+            border-color: blue;
+            border-style: solid;
+            color:red;
+            
+            padding: 40px;
+            /*padding-bottom: 50px;*/
+
+            /*padding: 10px 5px    TOP y BOTTON*/
+            /*padding: 10px 5px 4px 2px;*/
+
+            margin: 60px; /* cuanto se aleja del resto de la pagina*/
+        }
+
+        #parrafoEspecial{ /* con el # haces q se aplique si un elemtento usa el id="parrafoEspecial" */
+            color: blueviolet;
+        }
         
+        /*
+        *{              /* se lo aplica a todo, cambia el default 
+            
+        }
+        */
+
+        p spam{     /* se aplica a los spam q sean hijos de p */        
+            color:red;
+        }
+
+        div spam{
+            color:blue;
+            font-weight: 900;
+        }
+        /*
+        h1 + p{
+            color blueviolet;
+        }
+        */
+        /*
+        p ~ p{        
+        }
+        */
 
     </style>
     <link rel="stylesheet" href="css/Estilos.css">
     <title>Clase3 Ejemplo1</title>
 </head>
 <body>
-    <h3 style="color:rgba(255, 000, 000, .8)">Esto es un titulo</h3>
+    <h3 style="color:rgba(255, 000, 000, .5)">Esto es un titulo</h3>
     <h1>Esto es un H1</h1>
-    <h2>esto es un H2</h2>
+    <h2 class="Vistoso">esto es un H2</h2>
     <h4>Esto es un H4</h4>
     <h5>Esto es un H5</h5>
     <!-- -->
+    <p id="parrafoEspecial">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis sapiente ratione aliquid nostrum. Ipsum officiis nulla eveniet dolorum cum ad, provident deleniti beatae quas iure saepe, suscipit eum recusandae quia.</p>
+    <div>Lorem ipsum dolor sit amet, <spam>consectetur adipisicing elit.</spam> Itaque repellat beatae, dolores animi suscipit impedit facere nulla sunt. Sapiente saepe cum, optio dolores nobis doloremque dolorum libero ab perspiciatis aliquam.</div>
+    <p>Lorem ipsum dolor sit amet, <spam>consectetur adipisicing elit.</spam> Velit id repellat totam deleniti corporis, animi, doloremque. Corporis dolor modi vel minima ea temporibus ratione similique architecto, a voluptatem voluptates aliquam?</p>
+    <h1>Otro H1</h1>
+    <p>Primer Parrafo</p>
+    <p>Segundo Parrafo</p>
+    <p>Tercer Parrafo</p>
 </body>
 </html>

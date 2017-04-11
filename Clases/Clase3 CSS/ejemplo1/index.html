@@ -21,7 +21,6 @@
             
             /*text-transform: capitalize; Mayusculas las primeras letras */                
         }
-
         body{
             /*background-color: blanchedalmond;*/
             background-image: url("https://s-media-cache-ak0.pinimg.com/736x/14/4b/4c/144b4cb40239e9bfb2bbcac91427c88b.jpg"); /* ../images/Koala.php para ir para atras */            
@@ -72,7 +71,11 @@
         p ~ p{        
         }
         */
-
+        .classSonido{
+            voice-family: male;
+            richness: 80;
+            /*  cue-before: url("beep.au"); */
+        }
     </style>
     <link rel="stylesheet" href="css/Estilos.css">
     <title>Clase3 Ejemplo1</title>
@@ -91,5 +94,7 @@
     <p>Primer Parrafo</p>
     <p>Segundo Parrafo</p>
     <p>Tercer Parrafo</p>
+    <p class="classSonido">ola q ase</p>
+
 </body>
 </html>

@@ -22,6 +22,6 @@ $(document).ready(function () {
         })
             .fail(function (p, ts, et) {
 
-            })
+            });
     });
 });

@@ -5,10 +5,11 @@ $(document).ready(function()
         $.ajax({
             url: './misJson.php',
             type: 'POST',
-            dataType: 'JSON',  //data = JSON.parse(data);            
-        })
-        .done(function(data){
-            var cosas = "<ul>";
+            dataType: 'JSON',  //data = JSON.parse(data);
+            success: function(data)
+            {
+                
+                var cosas = "<ul>";
 
                 for(var i=0; i<data.length; i++)
                 {
@@ -30,14 +31,8 @@ $(document).ready(function()
                 cosas += "</ul>";
 
                 $("#salida").html(cosas);
-        })                            //FIN .done
-        .fail(function(peticion, textStatus, errorThrown){
-            alert("Error " + peticion.status + ' ' + errorThrown);
-        })                            //FIN .fail
-        .always(function(){
-            alert("aca no se q poner, es para probar el always");
-        })  
-                                     //FIN .always
-    }) //FIN de get_btn.click
-}) //FIN de document.ready
+            }
+        })
+    })
+})
 

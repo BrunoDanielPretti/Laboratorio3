@@ -5,21 +5,22 @@ $(document).ready(function()
         $.ajax({
             url: './misJson.php',
             type: 'POST',
-            dataType: 'JSON',
+            dataType: 'JSON',  //data = JSON.parse(data);
             success: function(data)
             {
+                
                 var cosas = "<ul>";
 
                 for(var i=0; i<data.length; i++)
                 {
-                    var num =  parseInt( (Math.random()*150+1) ) ;
-                    var fotito = "../../../Resources/emerald/animated/"+ num +".gif";
-                    var informacion = "<li>"                    
+                    //var num =  parseInt( (Math.random()*150+1) ) ;
+                    //var fotito = "../../../Resources/emerald/animated/"+ num +".gif";
+                    var informacion = "<li>";                    
                     informacion += " - " + data[i].id;
                     informacion += " - " + data[i].first_name;
                     informacion += " - " + data[i].last_name;
                     informacion += "<img class='img-rounded' src='" + data[i].foto + "' width='70' />";
-                    informacion += "<img class='img-rounded' src='" + fotito + "' width='70' />";
+                    //informacion += "<img class='img-rounded' src='" + fotito + "' width='70' />";
                     //
                     informacion +=  "</li>";
 
@@ -31,18 +32,7 @@ $(document).ready(function()
 
                 $("#salida").html(cosas);
             }
-
-
-
         })
-
-
-
-
     })
-
-
-
-
-
 })
+

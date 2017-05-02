@@ -1,7 +1,8 @@
 $(document).ready(function () {
 
     //agrego un manejador al boton cargarPaises
-    $(get_btn).click(function () {
+    $(get_btn).click(function ()
+    {
 
         $.ajax({
             "url": "paises.php",
@@ -24,6 +25,7 @@ $(document).ready(function () {
         });
     });
 
+    /*
     $.ajax({
         "url": "paises.php",
         "type": "POST",
@@ -43,9 +45,10 @@ $(document).ready(function () {
         }
 
     });
+    */
 
     $("#get_pais").click(function () {
-        $("#codPais").val($("#paises").val());
+        $("#codPais").val( $("#paises").val() );
     });
  
 });

@@ -1,0 +1,16 @@
+header.post{
+    color: gray;
+    /*font-style: italic;*/
+}
+div.titlePost{
+    font-size: 30px;
+    font-style: initial;
+}
+div.textPost{
+
+}
+div.autorPost{
+    font-size: 12px;
+    color: gray;
+    font-style: italic;
+}

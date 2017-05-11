@@ -1,0 +1,15 @@
+Copyright (c) 2009 Microsoft Corporation. Reservados todos los derechos.
+
+C:\xampp\htdocs\Lab3>node-b
+"node-b" no se reconoce como un comando interno o externo,
+programa o archivo por lotes ejecutable.
+
+C:\xampp\htdocs\Lab3>node -v
+v7.2.0
+
+C:\xampp\htdocs\Lab3>bower -v
+1.8.0
+
+C:\xampp\htdocs\Lab3>npm install bower -g
+
+C:\xampp\htdocs\Lab3>bower init

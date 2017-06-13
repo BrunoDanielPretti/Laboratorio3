@@ -5,6 +5,6 @@ tsc x.ts -w
 tsc -v
 tsc //actualiza
 tsc --watch
-tsc --init //tsconfig.json
+tsc --init     //tsconfig.json
 tsc --outFile appp.js app1 app2 app3  //crea el archivo appp.js q contiene los datos de app1, app2 y app3
 //------------------------------------------------------------

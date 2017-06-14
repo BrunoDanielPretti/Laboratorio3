@@ -31,12 +31,12 @@ class Vehiculo{
 	modelo: string;
 	private listaAccessorios: string;
 
-    constructor(pPrecio:number, pMotor:Motor, pMarca:string, pModelo:string, pListaAccessorios:string){
+    constructor(pPrecio:number, pMotor:Motor, pMarca:string, pModelo:string){
         this._precioBase = pPrecio;
         this._motor = pMotor;
         this.marca = pMarca;
-        this.modelo = pModelo;
-        this.listaAccessorios = pListaAccessorios;
+        this.modelo = pModelo;  
+        this.listaAccessorios = "";
     }
 
     public getPrecioBase(){
@@ -64,6 +64,7 @@ class Vehiculo{
     }
 
     public AgregarAccesorios(...pAccesorios: Accesorio[]){
+        let miArray:string[] =
         this.listaAccessorios = pAccesorios.join(" ");
     }
 }
@@ -77,9 +78,19 @@ class Camion extends Vehiculo{
     Largo:nLargo;
     cuatroXcuatro:boolean;
 
-    constructor(pPrecio:number, pMotor:Motor, pMarca:string, pModelo:string, pListaAccessorios:string, pcXc:boolean, pLargo:nLargo){
-        super(pPrecio, pMotor, pMarca, pModelo, pListaAccessorios);
+    constructor(pPrecio:number, pMotor:Motor, pMarca:string, pModelo:string, pcXc:boolean, pLargo:nLargo){
+        super(pPrecio, pMotor, pMarca, pModelo);
         this.Largo = pLargo;
         this.cuatroXcuatro = pcXc;
     }
+}
+
+window.onload = function(){
+    //alert("ola q ase");
+    let villanos:String[]=["Lex Luthor", "Loki", "Duende Verde"];
+
+    let miCamion:Camion = new Camion(100, new Motor(255, "tipoDelMotor"), "Priulo", "leModelo", true, nLargo.corto);
+    miCamion.AgregarAccesorios(new Accesorio(1, "linterna"));
+    console.log("precio total del Camion: " + miCamion.getPrecioTotal());
+    console.log( "Lista de Accesorios: " + miCamion.getListaAccessorios() );
 }

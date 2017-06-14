@@ -26,12 +26,12 @@ var Accesorio = (function () {
     return Accesorio;
 }());
 var Vehiculo = (function () {
-    function Vehiculo(pPrecio, pMotor, pMarca, pModelo, pListaAccessorios) {
+    function Vehiculo(pPrecio, pMotor, pMarca, pModelo) {
         this._precioBase = pPrecio;
         this._motor = pMotor;
         this.marca = pMarca;
         this.modelo = pModelo;
-        this.listaAccessorios = pListaAccessorios;
+        this.listaAccessorios = "";
     }
     Vehiculo.prototype.getPrecioBase = function () {
         return this._precioBase;
@@ -59,7 +59,7 @@ var Vehiculo = (function () {
         for (var _i = 0; _i < arguments.length; _i++) {
             pAccesorios[_i] = arguments[_i];
         }
-        this.listaAccessorios = pAccesorios.join(" ");
+        var miArray = this.listaAccessorios = pAccesorios.join(" ");
     };
     return Vehiculo;
 }());
@@ -71,11 +71,19 @@ var nLargo;
 })(nLargo || (nLargo = {}));
 var Camion = (function (_super) {
     __extends(Camion, _super);
-    function Camion(pPrecio, pMotor, pMarca, pModelo, pListaAccessorios, pcXc, pLargo) {
-        var _this = _super.call(this, pPrecio, pMotor, pMarca, pModelo, pListaAccessorios) || this;
+    function Camion(pPrecio, pMotor, pMarca, pModelo, pcXc, pLargo) {
+        var _this = _super.call(this, pPrecio, pMotor, pMarca, pModelo) || this;
         _this.Largo = pLargo;
         _this.cuatroXcuatro = pcXc;
         return _this;
     }
     return Camion;
 }(Vehiculo));
+window.onload = function () {
+    //alert("ola q ase");
+    var villanos = ["Lex Luthor", "Loki", "Duende Verde"];
+    var miCamion = new Camion(100, new Motor(255, "tipoDelMotor"), "Priulo", "leModelo", true, nLargo.corto);
+    miCamion.AgregarAccesorios(new Accesorio(1, "linterna"));
+    console.log("precio total del Camion: " + miCamion.getPrecioTotal());
+    console.log("Lista de Accesorios: " + miCamion.getListaAccessorios());
+};
